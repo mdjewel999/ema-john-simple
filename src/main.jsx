@@ -10,9 +10,10 @@ import {
 import Shop from './components/Shop/Shop';
 import Home from './components/Layout/Home';
 import Orders from './components/Orders/Orders';
-import Order_review from './components/Order_review/Order_review';
+import Order_review from './components/OrderReview/OrderReview';
 import Manage_Inventory from './components/Manage_Inventory/Manage_Inventory';
 import Login from './components/Login/Login';
+import cartProductsLoader from './loaders/cartProductsLoader';
 
 const router = createBrowserRouter([
   {
@@ -25,7 +26,8 @@ const router = createBrowserRouter([
       },
       {
         path:'Orders',
-        element:<Orders></Orders>
+        element:<Orders></Orders>,
+        loader:cartProductsLoader
       },
       {
         path:'Order_review',

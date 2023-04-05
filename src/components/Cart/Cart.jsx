@@ -1,21 +1,20 @@
 import React from "react";
 import "./Cart.css";
 
-const Cart = ({cart}) => {  // option 3  --props or {cart}
-    // const cart = props.cart; // option 1 
-    // const {cart} = props;  // option 2
+const Cart = ({ cart }) => {
+  // option 3  --props or {cart}
+  // const cart = props.cart; // option 1
+  // const {cart} = props;  // option 2
 
-let totalPrice = 0;
-let totalShipping = 0;
-let taxTotal = 0;
-for(const product of cart){
-  totalPrice = totalPrice + product.price;
-  totalShipping = totalShipping + product.shipping;
-}
-taxTotal = totalPrice * 7 / 100;
-const grandTotal = totalPrice + totalShipping + taxTotal;
-
-
+  let totalPrice = 0;
+  let totalShipping = 0;
+  let taxTotal = 0;
+  for (const product of cart) {
+    totalPrice = totalPrice + product.price;
+    totalShipping = totalShipping + product.shipping;
+  }
+  taxTotal = (totalPrice * 7) / 100;
+  const grandTotal = totalPrice + totalShipping + taxTotal;
 
   return (
     <div className="cart">
