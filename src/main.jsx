@@ -14,6 +14,7 @@ import Order_review from './components/OrderReview/OrderReview';
 import Manage_Inventory from './components/Manage_Inventory/Manage_Inventory';
 import Login from './components/Login/Login';
 import cartProductsLoader from './loaders/cartProductsLoader';
+import Checkout from './components/Checkout/Checkout';
 
 const router = createBrowserRouter([
   {
@@ -40,6 +41,10 @@ const router = createBrowserRouter([
       {
         path:'login',
         element:<Login></Login>
+      },
+      {
+        path:'checkout',
+        element:<Checkout></Checkout>
       }
     ]
   }
