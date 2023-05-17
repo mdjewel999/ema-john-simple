@@ -9,7 +9,7 @@ const OrderReview = ({ product, handleRemoveCart }) => {
 
   console.log(product);
 
-  const { id, img, price, name, quantity } = product;
+  const { _id, img, price, name, quantity } = product;
 
   return (
 
@@ -25,7 +25,7 @@ const OrderReview = ({ product, handleRemoveCart }) => {
           Order Quantity : <span className="orange-text">{quantity}</span>
         </p>
       </div>
-      <button onClick={() => handleRemoveCart(id)} className="btn-delat">
+      <button onClick={() => handleRemoveCart(_id)} className="btn-delat">
         {" "}
         <FontAwesomeIcon className="deleat-icon" icon={faTrashAlt} />
       </button>
